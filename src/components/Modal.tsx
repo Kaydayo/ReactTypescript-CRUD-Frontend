@@ -5,7 +5,7 @@ import { NewData } from '../interfaces/items.interface';
 import axios from 'axios'
 
 
-const url:string = 'http://localhost:4000/items'
+const url:string = 'https://nestjs-crud-operation-app.herokuapp.com/items'
 const Modal = ({handleCloseModal}:Modalprops):JSX.Element => {
     const [newData, setNewData] = useState<NewData>({name:'',description:'', quantity:0, price:0})
     const handleChanges = (e:React.ChangeEvent<HTMLInputElement>)=>{

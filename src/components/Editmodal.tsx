@@ -4,7 +4,7 @@ import { GrDocumentUpdate } from 'react-icons/gr';
 import axios from 'axios'
 
 
-const url:string = 'http://localhost:4000/items'
+const url:string = 'https://nestjs-crud-operation-app.herokuapp.com/items'
 const EditModal = ({id, name, description, quantity, price, handleEdit}:HandleEdit ):JSX.Element => {
     const [updateData, setUpdateData] = useState<NewData>({name,description,quantity,price})
 

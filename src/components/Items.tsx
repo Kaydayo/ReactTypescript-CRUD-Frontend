@@ -5,7 +5,7 @@ import {RiDeleteBin2Line} from 'react-icons/ri'
 import axios from 'axios'
 import EditModal from './Editmodal';
 
-const url:string = 'http://localhost:4000/items'
+const url:string = 'https://nestjs-crud-operation-app.herokuapp.com/items'
 const Items = ({id, name, description, quantity, price}:Data):JSX.Element => {
 const [isEdit, setIsEdit] = useState<boolean>(false)
 const myProps:Data = {id,name, description, quantity, price}

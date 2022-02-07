@@ -7,7 +7,7 @@ import axios from 'axios';
 import Modal from './components/Modal';
 
 
-const url:string = 'http://localhost:4000/items'
+const url:string = 'https://nestjs-crud-operation-app.herokuapp.com/items'
 
 function App() {
   const [data, setData] = useState<Data[]>([])
