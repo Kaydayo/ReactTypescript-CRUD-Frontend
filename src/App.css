@@ -1,0 +1,309 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  font-family: 'Montserrat', sans-serif;
+  transition: all 0.3s;
+  background-color: rgb(240, 240, 240);
+  /* background-color: #1D1C1C; */
+}
+.nav-header{
+  height:10vh;
+  background-color: #292727;
+  padding: 1rem;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+
+.logo{
+  color: #D6404A;
+  font-size: 2.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.logo h3{
+  font-size: 1.5rem;
+}
+.create{
+  background: linear-gradient(-45deg, #b50c00, #c73e3c, #c86527, #b50039);
+  background-size: 800% 400%;
+  padding: 0.5em 1em;
+  display: inline-block;
+  border: none;
+  border-radius: 10px;
+  font-size: 17px;
+  font-weight: 700;
+  color: white;
+  transition: all .5s ease-in-out;
+  animation: gradient 10s infinite cubic-bezier(.62, .28, .23, .99) both;
+ }
+ 
+ .create:hover {
+  animation: gradient 3s infinite;
+  transform: scale(1.05);
+  cursor: pointer;
+ }
+ 
+ .create:active {
+  animation: gradient 3s infinite;
+  transform: scale(0.8);
+ }
+ 
+ @keyframes gradient {
+  0% {
+   background-position: 0% 50%;
+  }
+ 
+  50% {
+   background-position: 100% 50%;
+  }
+ 
+  100% {
+   background-position: 0% 50%;
+  }
+}
+
+.loading{
+  width: fit-content;
+  margin: 0 auto;
+  margin-top: 4rem;
+}
+
+.card{
+  width: 200px;
+  height: auto;
+  padding: 1rem;
+  border-radius: 0.25rem;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  overflow-x: scroll;
+  position: relative;
+  
+}
+
+.card h3{
+font-size: 2rem;
+color: red;
+text-transform: capitalize;
+}
+.top div{
+  width: auto;
+  height: 7rem;
+  background-color: #292727;
+}
+
+.card-content{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.25rem;
+  column-gap: 0.25rem;
+  margin: 0 auto;
+  width: 90vw;
+  margin-top: 1rem;
+  row-gap: 1rem;
+}
+.edit{
+  background-color: plum;
+  background-size: 800% 400%;
+  padding: 0.5em 1em;
+  display: inline-block;
+  border: none;
+  border-radius: 10px;
+  font-size: 17px;
+  font-weight: 700;
+  color: white;
+  transition: all .5s ease-in-out;
+  animation: gradient 10s infinite cubic-bezier(.62, .28, .23, .99) both;
+  position: absolute;
+  bottom:0.5rem;
+  right: 0.5rem;
+  margin-top: 4rem;
+ }
+ 
+ .edit:hover {
+  animation: gradient 3s infinite;
+  transform: scale(1.05);
+  cursor: pointer;
+  background-color: rgb(112, 40, 112);
+ }
+ 
+ .edit:active {
+  animation: gradient 3s infinite;
+  transform: scale(0.8);
+ }
+ .delete{
+  background-color: greenyellow;
+  background-size: 800% 400%;
+  padding: 0.5em 1em;
+  display: inline-block;
+  border: none;
+  border-radius: 10px;
+  font-size: 17px;
+  font-weight: 700;
+  color: white;
+  transition: all .5s ease-in-out;
+  animation: gradient 10s infinite cubic-bezier(.62, .28, .23, .99) both;
+  position: absolute;
+  bottom:0.5rem;
+ }
+ .buttons{
+   display: flex;
+   gap: 1rem;
+   width: fit-content;
+   margin: 0 auto;
+   margin-top: 1rem;
+ }
+ 
+ .delete:hover {
+  animation: gradient 3s infinite;
+  transform: scale(1.05);
+  cursor: pointer;
+  background-color: green;
+ }
+ 
+ .delete:active {
+  animation: gradient 3s infinite;
+  transform: scale(0.8);
+ }
+
+ .form-modal{
+  z-index: 3;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.562);
+  position: fixed;
+  top: 0;
+
+ }
+.modal-content{
+width: 50%;
+height: 30%;
+margin: 15% auto;
+background-color: rgb(240, 240, 240);
+padding: 2rem;
+position: relative;
+box-sizing: content-box;
+}
+
+.send-create {
+  padding: 1.3em 3em;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  color: #000;
+  background-color: #fff;
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  margin-top: 2rem;
+  text-align: center;
+  outline: none;
+ }
+ 
+.send-create:hover {
+  background-color: #D6404A;
+  box-shadow: 0px 15px 20px rgb(187, 71, 8);
+  color: #fff;
+  transform: translateY(-7px);
+ }
+ 
+.send-create:active {
+  transform: translateY(-1px);
+ }
+
+ label{
+   font-size: 2rem;
+ }
+
+ input{
+   width: 70%;
+   height: 2rem;
+   background-color: transparent;
+   color: black;
+   float: right;
+   font-size: 1rem;
+   padding-left: 0.5rem;
+ }
+ .create-btn{
+   width: fit-content;
+   margin: 0 auto;
+ }
+.close-modal{
+  font-size: 2rem;
+  position: absolute;
+  cursor: pointer;
+  color: #292727;
+  left: 0;
+  top: 0;
+}
+.close-modal:hover{
+  color:#D6404A;
+}
+
+.update{
+  background-color: plum;
+  background-size: 800% 400%;
+  padding: 0.5em 1em;
+  display: inline-block;
+  border: none;
+  border-radius: 10px;
+  font-size: 17px;
+  font-weight: 700;
+  color: white;
+  transition: all .5s ease-in-out;
+  animation: gradient 10s infinite cubic-bezier(.62, .28, .23, .99) both;
+  position: absolute;
+  bottom:0.5rem;
+  right: 0.5rem;
+ }
+ 
+ .update:hover {
+  animation: gradient 3s infinite;
+  transform: scale(1.05);
+  cursor: pointer;
+  background-color: rgb(112, 40, 112);
+ }
+ 
+ .update:active {
+  animation: gradient 3s infinite;
+  transform: scale(0.8);
+ }
+
+@media only screen and (max-width: 720px)  {
+  .card-content{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.25rem;
+    column-gap: 0.5rem;
+    margin: 0 auto;
+    width: fit-content;
+    padding: 1rem;
+  }
+  .modal-content{
+    width: 50%;
+    height: 60%;
+    margin: 15% auto;
+    background-color: rgb(240, 240, 240);
+    padding: 2rem;
+    }
+    input{
+      width: 100%;
+      height: 2rem;
+      background-color: transparent;
+      color: black;
+      float: right;
+      font-size: 1rem;
+    }
+}
